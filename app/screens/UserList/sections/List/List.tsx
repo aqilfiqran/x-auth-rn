@@ -5,11 +5,11 @@ import { AppNavScreen } from "app/navigators"
 import { useUserList } from "app/services/api/user"
 import { size, spacing } from "app/theme"
 import { useTheme } from "app/theme/hooks"
-import { memo, useCallback, useMemo } from "react"
+import { useCallback, useMemo } from "react"
 import { FlatList } from "react-native"
 import { RefreshControl } from "react-native-gesture-handler"
 
-export const List = memo(() => {
+export const List = () => {
   const { colors } = useTheme()
   const navigation = useNavigation<AppNavScreen>()
 
@@ -25,8 +25,7 @@ export const List = memo(() => {
     isFetchingNextPage,
   } = useUserList({
     query: {
-      page: 1,
-      per_page: 5,
+      per_page: 10,
     },
   })
 
@@ -94,4 +93,4 @@ export const List = memo(() => {
       contentContainerStyle={{ paddingBottom: spacing.hugeSpace }}
     />
   )
-})
+}
