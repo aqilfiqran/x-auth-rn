@@ -61,6 +61,13 @@ Noted: you need to have an Apple Developer Account to build IPA
 - go to `Product` -> `Archive`
 - send to App Store or test with `TestFlight`
 
+## Output App
+
+```bash
+# for android (directory)
+output/contact-app.apk
+```
+
 ## API Documentation
 
 using [reqres](https://reqres.in/api) for testing purpose. login successful with
